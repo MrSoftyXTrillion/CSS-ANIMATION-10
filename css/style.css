@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.preloader {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+}
+.preloader_cnt {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+}
+#main {
+    margin: auto;
+}
+#main .one {
+    transform: rotate(0deg);
+    animation: one 2s linear infinite forwards;
+}
