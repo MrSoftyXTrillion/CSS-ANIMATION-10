@@ -4,20 +4,169 @@
     box-sizing: border-box;
 }
 .preloader {
+    position: fixed;
+    inset: 0;
     display: flex;
-    height: 100vh;
-    background-color: black;
+    background: #000;
 }
 .preloader_cnt {
+    margin: auto;
     width: 400px;
     height: 400px;
-    margin: auto;
-    display: flex;
+    position: relative;
+}
+.preloader_cnt .circle1 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: -90px;
+    bottom: 8px;
+    transform: rotate(0deg);
+    animation: circle1 3s linear 3.5s infinite forwards;
+}
+.preloader_cnt .circle1 span:nth-child(1) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(90deg);
+    top: 95px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle1 span:nth-child(2) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(180deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle1 span:nth-child(3) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(45deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle1 span:nth-child(4) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(135deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+@keyframes circle1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.preloader_cnt .circle2 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 296px;
+    bottom: 8px;
+    transform: rotate(0deg);
+    animation: circle2 3s linear 3.5s infinite forwards;
+}
+.preloader_cnt .circle2 span:nth-child(1) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(90deg);
+    top: 95px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle2 span:nth-child(2) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(180deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle2 span:nth-child(3) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(45deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+.preloader_cnt .circle2 span:nth-child(4) {
+    position: fixed;
+    width: 200px;
+    height: 2px;
+    transform: rotate(135deg);
+    top: 94px;
+    left: -5px;
+    background-color: white;
+}
+@keyframes circle2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 #main {
-    margin: auto;
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation: complete 5s linear 1 forwards;
 }
-#main .one {
-    transform: rotate(0deg);
-    animation: one 2s linear infinite forwards;
+@keyframes complete {
+    0% {
+        stroke-dasharray: 800px;
+        stroke-dashoffset: 800px;
+    }
+    100% {
+        stroke-dasharray: 800px;
+        stroke-dashoffset: 0px;
+    }
+}
+#main .handle {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+    animation: handle 3s linear 1 forwards;
+}
+@keyframes handle {
+    0% {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 100px;
+    }
+    100% {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 0px;
+    }
+}
+#main .seat {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+    animation: seat 3s linear 1 forwards;
+}
+@keyframes seat {
+    0% {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 100px;
+    }
+    100% {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 0px;
+    }
 }
